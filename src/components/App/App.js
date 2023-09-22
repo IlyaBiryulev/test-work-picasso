@@ -1,6 +1,8 @@
 import './App.css';
 import { useGetListQuery } from '../../redux';
+import { Routes, Route } from 'react-router-dom';
 import Main from '../Main/Main';
+import Post from '../Post/Post';
 
 function App() {
   const {data = [], isLoading} = useGetListQuery()
@@ -8,7 +10,18 @@ function App() {
   return (
     <div className='app'>
       {isLoading && <h1>Загрузка...</h1>}
-      <Main data={data}/>
+      <Routes>
+        <Route path='/'
+          element={
+            <Main data={data}/>
+          }
+        />
+        <Route path='/:id'
+          element={
+            <Post />
+          }
+        />
+      </Routes>
     </div>
   );
 }
