@@ -29,7 +29,7 @@
 
 ### Ссылки
 
-[Ссылка на страницу сайта]()
+[Ссылка на страницу сайта](https://ilyabiryulev.github.io/test-work-picasso/)
 
 [Ссылка на проект](https://github.com/IlyaBiryulev/test-work-picasso)
 
