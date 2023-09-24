@@ -9,3 +9,12 @@
     align-items: center;
     list-style: none;
 }
+
+.main__last-element {
+    width: 100%;
+    height: 20px;
+}
+
+.main__page-btn {
+    display: flex;
+}

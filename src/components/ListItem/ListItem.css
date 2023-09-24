@@ -1,13 +1,13 @@
 .list-item {
     width: 800px;
-    height: 100px;
+    min-height: 100px;
     border: 2px solid #000;
     margin: 10px;
     padding: 10px;
 }
 
 .list-item__title {
-    font-size: 22px;
+    font-size: 21px;
     font-weight: 600;
     font-style: italic;
     margin-bottom: 10px;
@@ -24,6 +24,7 @@
     width: 600px;
     font-size: 18px;
     font-weight: 400;
+    line-height: 25px;
     text-align: justify;
     display: -webkit-box;
     -webkit-line-clamp: 2;

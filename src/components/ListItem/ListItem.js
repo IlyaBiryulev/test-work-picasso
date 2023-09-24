@@ -7,7 +7,7 @@ function ListItem({item, onMoreClick}) {
 
   return (
     <li className='list-item'>
-        <h1 className='list-item__title'>{item.id}. {item.title}</h1>
+        <h1 className='list-item__title'>#{item.id}. {item.title}</h1>
         <div className='list-item__content'>
           <p className='list-item__text'>{item.body}</p>
           <button className='list-item__btn' onClick={handleClick}>Подробнее</button>
