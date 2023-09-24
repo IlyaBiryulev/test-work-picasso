@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-const LIST_URL = 'https://jsonplaceholder.typicode.com/'
+import { LIST_URL } from '../utils/constants';
 
 export const listApi = createApi({
     reducerPath: 'listApi',
@@ -8,16 +8,14 @@ export const listApi = createApi({
         getList: build.query({
             query: ( page ) => `posts?_limit=10&_page=${page}`,
             transformResponse(apiResponse, meta) {
-                return { apiResponse, totalCount: Number(meta.response.headers.get('X-Total-Count')) }
+                return { apiResponse }
             },
             serializeQueryArgs: ({ endpointName }) => {
                 return endpointName;
               },
-              // Always merge incoming data to the cache entry
               merge: (currentCache, newItems) => {
                 currentCache.apiResponse.push(...newItems.apiResponse);
               },
-              // Refetch when the page arg changes
               forceRefetch({ currentArg, previousArg }) {
                 return currentArg !== previousArg;
               }

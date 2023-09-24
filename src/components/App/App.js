@@ -27,12 +27,12 @@ function App() {
 
   return (
     <div className='app'>
-      {isLoading && <h1>Загрузка...</h1>}
       <Routes>
         <Route path='/'
           element={
             <Main 
               posts={posts}
+              isLoading={isLoading}
             />
           }
         />

@@ -1,8 +1,8 @@
 .list-item {
-    width: 800px;
+    width: 100%;
     min-height: 100px;
     border: 2px solid #000;
-    margin: 10px;
+    margin: 10px 0;
     padding: 10px;
 }
 
